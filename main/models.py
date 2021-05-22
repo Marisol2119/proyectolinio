@@ -36,5 +36,3 @@ class Producto(models.Model):
       codigo_categoria = self.categoria.codigo.zfill(4)
       codigo_producto = str(self.id).zfill(6)
       return f'{codigo_categoria}-{codigo_producto}'
-
-
