@@ -3,6 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title> LinioExp </title>
+
+      <div class="columns">
+    {% for image in object.images.all %}
+    <div class="column is-3">
+        <figure class="image is-square">
+            <a href="{{ image.image.url }}">
+                <img src="{{ image.image.url }}" alt="No hay imagen disponible">
+            </a>
+        </figure>
+    </div>
+    {% empty %}
+    <div class="column content">
+        <p>Aún no hay imágenes disponibles</p>
+    </div>
+    {% endfor %}
+</div>
+
   </head>
   <body>
     <h1> Linio Exp </h1>

@@ -191,6 +191,14 @@ class CompletePaymentView(View):
 class ProductListView(ListView):
     model = Producto
 
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        if query is not None:
+            object_list = Producto.objects.filter(nombre__icontains=query)
+            return object_list
+        else:
+            return Producto.objects.all()
+
 class ProductDetailView(DetailView):
     model = Producto
 

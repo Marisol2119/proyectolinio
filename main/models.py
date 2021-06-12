@@ -128,3 +128,7 @@ class DetallePedido(models.Model):
 
     def get_subtotal(self):
         return self.producto.get_precio_final() * self.cantidad
+
+class ProductoImage(models.Model):
+    product = models.ForeignKey('Producto', on_delete=models.CASCADE, related_name='images')
+    image = models.ImageField(upload_to="products", null=True, blank=True)
