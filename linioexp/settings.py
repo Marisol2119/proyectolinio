@@ -26,7 +26,7 @@ SECRET_KEY = '8jug_g940a!b!g*&9e@xmqd*9m3dj7*%*ifg*p9j6ga*nq+%k)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['linio21.herokuapp.com','127.0.0.1']
 
 
 # Application definition
